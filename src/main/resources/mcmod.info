@@ -1,0 +1,16 @@
+[
+{
+  "modid": "demeraldcraft",
+  "name": "Demerald Craft",
+  "description": "Demerald Craft mod.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["thezak48"], ["stobbsie"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
