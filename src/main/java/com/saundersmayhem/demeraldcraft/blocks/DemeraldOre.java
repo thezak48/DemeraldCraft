@@ -23,7 +23,7 @@ public class DemeraldOre extends Block {
 		this.setBlockName("DemeraldOre");
 		this.setStepSound(Block.soundTypeStone);
 		this.setHarvestLevel("pickaxe", 2);
-		this.setCreativeTab(CreativeTabs.tabAllSearch);
+		//this.setCreativeTab(CreativeTabs.tabAllSearch);
 	}
 	
 	public Item getItemDropped(int par1, Random par2Random, int par3){

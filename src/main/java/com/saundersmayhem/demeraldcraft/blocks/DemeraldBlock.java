@@ -16,6 +16,6 @@ public class DemeraldBlock extends Block {
 		this.setHardness(4f);
 		this.setResistance(5f);
 		this.setBlockName("DemeraldBlock");	
-		this.setCreativeTab(CreativeTabs.tabAllSearch);	
+		//this.setCreativeTab(CreativeTabs.tabAllSearch);	
 	}
 }

@@ -29,7 +29,7 @@ public class DemeraldFurnace extends BlockContainer  {
 		this.setBlockName("DemeraldFurnace");
 		this.setBlockTextureName("demeraldcraft:DemeraldFurnace");
 		this.setCreativeTab(Demeraldcraft.DemeraldCraft);
-		this.setCreativeTab(CreativeTabs.tabAllSearch);
+		//this.setCreativeTab(CreativeTabs.tabAllSearch);
 	}
 
 	@Override

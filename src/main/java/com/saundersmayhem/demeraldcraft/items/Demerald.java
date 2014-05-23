@@ -12,7 +12,8 @@ public class Demerald extends Item {
 	public Demerald(int i) {
 		this.setUnlocalizedName("Demerald");
 		this.setTextureName("demeraldcraft:Demerald");
-		this.setCreativeTab(CreativeTabs.tabMaterials);
-		this.setCreativeTab(CreativeTabs.tabAllSearch);
+		//this.setCreativeTab(CreativeTabs.tabMaterials);
+		this.setCreativeTab(Demeraldcraft.DemeraldCraft);
+		//this.setCreativeTab(CreativeTabs.tabAllSearch);
 	}
 }

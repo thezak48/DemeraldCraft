@@ -1,6 +1,8 @@
 package com.saundersmayhem.demeraldcraft;
 
+import com.saundersmayhem.demeraldcraft.blocks.BlockWindmill;
 import com.saundersmayhem.demeraldcraft.blocks.DemeraldFurnaceTileEntity;
+import com.saundersmayhem.demeraldcraft.items.itemWindmill;
 import com.saundersmayhem.demeraldcraft.lib.ProxyCommon;
 import com.saundersmayhem.demeraldcraft.lib.References;
 
@@ -33,7 +35,8 @@ public class Demeraldcraft
     public static Demeraldcraft instance;
     
     //Items
-    	public static Item Demerald = new com.saundersmayhem.demeraldcraft.items.Demerald(4999);
+    	public static Item Demerald = new com.saundersmayhem.demeraldcraft.items.Demerald(3000);
+    	public static Item itemWindmill = new itemWindmill(3001);
     
     //CreativeTab
     	public static CreativeTabs DemeraldCraft = new CreativeTabs("Demerald Craft"){
@@ -45,9 +48,11 @@ public class Demeraldcraft
     //Blocks
     	public static final Block DemeraldBlock = new com.saundersmayhem.demeraldcraft.blocks.DemeraldBlock(2000, Material.iron);
 
-		private static final Block DemeraldOre = new com.saundersmayhem.demeraldcraft.blocks.DemeraldOre(2001, Material.rock);
+		public static final Block DemeraldOre = new com.saundersmayhem.demeraldcraft.blocks.DemeraldOre(2001, Material.rock);
 		
-		private static final Block DemeraldFurnace = new com.saundersmayhem.demeraldcraft.blocks.DemeraldFurnace(2002, Material.iron);
+		public static final Block DemeraldFurnace = new com.saundersmayhem.demeraldcraft.blocks.DemeraldFurnace(2002, Material.iron);
+		
+		public static Block BlockWindmill = new BlockWindmill(2003, Material.iron);
     	
     //Crafting Recipes
     @EventHandler
