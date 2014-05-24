@@ -14,6 +14,6 @@ public class Demerald extends Item {
 		this.setTextureName("demeraldcraft:Demerald");
 		//this.setCreativeTab(CreativeTabs.tabMaterials);
 		this.setCreativeTab(Demeraldcraft.DemeraldCraft);
-		//this.setCreativeTab(CreativeTabs.tabAllSearch);
+		this.setCreativeTab(CreativeTabs.tabAllSearch);
 	}
 }

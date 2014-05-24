@@ -5,6 +5,10 @@ import com.saundersmayhem.demeraldcraft.blocks.DemeraldFurnaceTileEntity;
 import com.saundersmayhem.demeraldcraft.items.itemWindmill;
 import com.saundersmayhem.demeraldcraft.lib.ProxyCommon;
 import com.saundersmayhem.demeraldcraft.lib.References;
+import com.saundersmayhem.demeraldcraft.items.Demerald;
+import com.saundersmayhem.demeraldcraft.blocks.DemeraldBlock;
+import com.saundersmayhem.demeraldcraft.blocks.DemeraldOre;
+import com.saundersmayhem.demeraldcraft.blocks.DemeraldFurnace;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -35,22 +39,22 @@ public class Demeraldcraft
     public static Demeraldcraft instance;
     
     //Items
-    	public static Item Demerald = new com.saundersmayhem.demeraldcraft.items.Demerald(3000);
+    	public static Item Demerald = new Demerald(3000);
     	public static Item itemWindmill = new itemWindmill(3001);
     
     //CreativeTab
-    	public static CreativeTabs DemeraldCraft = new CreativeTabs("Demerald Craft"){
+    	public static CreativeTabs DemeraldCraft = new CreativeTabs("DemeraldCraft"){
     		public Item getTabIconItem(){
-    			return new Item();
+    			return Demerald;
     		}
     	};
     	
     //Blocks
-    	public static final Block DemeraldBlock = new com.saundersmayhem.demeraldcraft.blocks.DemeraldBlock(2000, Material.iron);
+    	public static final Block DemeraldBlock = new DemeraldBlock(2000, Material.iron);
 
-		public static final Block DemeraldOre = new com.saundersmayhem.demeraldcraft.blocks.DemeraldOre(2001, Material.rock);
+		public static final Block DemeraldOre = new DemeraldOre(2001, Material.rock);
 		
-		public static final Block DemeraldFurnace = new com.saundersmayhem.demeraldcraft.blocks.DemeraldFurnace(2002, Material.iron);
+		public static final Block DemeraldFurnace = new DemeraldFurnace(2002, Material.iron);
 		
 		public static Block BlockWindmill = new BlockWindmill(2003, Material.iron);
     	
@@ -83,7 +87,12 @@ public class Demeraldcraft
     	});
     }
     	
-    @EventHandler
+    protected static Item Demerald() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@EventHandler
     public void init(FMLInitializationEvent event)
     {
     	
