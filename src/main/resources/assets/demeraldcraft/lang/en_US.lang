@@ -1,11 +1,13 @@
 item.Demerald.name=Demerald
-
+item.Windmill.name=Windmill
 
 
 
 tile.DemeraldBlock.name=Demerald Block
 tile.DemeraldOre.name=Demerald Ore
 tile.DemeraldFurnace.name=Demerald Furnace
+tile.WindmillBlock.name=Windmill
+tile.WindmillBase.anme=Windmill Base
 
 
 
