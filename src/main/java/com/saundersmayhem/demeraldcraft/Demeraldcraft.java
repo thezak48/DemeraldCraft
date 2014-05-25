@@ -6,9 +6,12 @@ import com.saundersmayhem.demeraldcraft.items.itemWindmill;
 import com.saundersmayhem.demeraldcraft.lib.ProxyCommon;
 import com.saundersmayhem.demeraldcraft.lib.References;
 import com.saundersmayhem.demeraldcraft.items.Demerald;
+import com.saundersmayhem.demeraldcraft.blocks.BlockWindmillBase;
 import com.saundersmayhem.demeraldcraft.blocks.DemeraldBlock;
 import com.saundersmayhem.demeraldcraft.blocks.DemeraldOre;
 import com.saundersmayhem.demeraldcraft.blocks.DemeraldFurnace;
+import com.saundersmayhem.demeraldcraft.blocks.TileEntityWindmill;
+import com.saundersmayhem.demeraldcraft.blocks.TileEntityWindmillBase;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -57,6 +60,8 @@ public class Demeraldcraft
 		public static final Block DemeraldFurnace = new DemeraldFurnace(2002, Material.iron);
 		
 		public static Block BlockWindmill = new BlockWindmill(2003, Material.iron);
+		
+		public static Block BlockWindmillBase = new BlockWindmillBase(2004, Material.rock);
     	
     //Crafting Recipes
     @EventHandler
@@ -85,6 +90,7 @@ public class Demeraldcraft
     		"xxx",
     		'x', new ItemStack(Demerald)
     	});
+    	
     }
     	
     protected static Item Demerald() {
@@ -117,15 +123,20 @@ public class Demeraldcraft
     	//Item Registry
     		//GameReg
     			GameRegistry.registerItem(Demerald, "Demerald");
+    			GameRegistry.registerItem(itemWindmill, "Windmill");
     		//LangReg
     	//Block Registry
     		//GameReg
     			GameRegistry.registerBlock(DemeraldBlock, "Demerald Block");
     			GameRegistry.registerBlock(DemeraldOre, "Demerald Ore");
-    			GameRegistry.registerBlock(DemeraldFurnace, "Demerald Furnace");  			
+    			GameRegistry.registerBlock(DemeraldFurnace, "Demerald Furnace"); 
+    			GameRegistry.registerBlock(BlockWindmill, "Windmill Block");
+    			GameRegistry.registerBlock(BlockWindmillBase, "Windmill Base");
     		//LangReg
     		//TileReg
     			GameRegistry.registerTileEntity(DemeraldFurnaceTileEntity.class, "DemeraldFurnaceTileEntity"); 
+    			GameRegistry.registerTileEntity(TileEntityWindmill.class, "WindmillTileEntity");
+    			GameRegistry.registerTileEntity(TileEntityWindmillBase.class, "WindmillTileEntityBase");
     	//CreativeTabs
     			LanguageRegistry.instance().addStringLocalization("itemGroup.DemeraldCraft", "en_us", "Demerald Craft" );
     }
