@@ -12,6 +12,7 @@ import net.minecraft.util.ResourceLocation;
 public class TileEntityRenderWindmill extends TileEntitySpecialRenderer {
 
 	private final ResourceLocation textureWindmill = new ResourceLocation(com.saundersmayhem.demeraldcraft.lib.References.MODID, "textures/model/windmill.png");
+	private final ResourceLocation textureWindmillBlade = new ResourceLocation(com.saundersmayhem.demeraldcraft.lib.References.MODID, "textures/model/windmillBlade.png");
 	
 	private float pixel = 1F/16F;
 	
@@ -24,6 +25,11 @@ public class TileEntityRenderWindmill extends TileEntitySpecialRenderer {
 		int z1 = tileentity.zCoord;
 		
 		int metadata = tileentity.getWorldObj().getBlockMetadata(tileentity.xCoord, tileentity.yCoord, tileentity.zCoord);
+		
+		while(tileentity.getWorldObj().getBlockMetadata(x1, y1, z1) < 7 && tileentity.getWorldObj().getBlock(x1, y1, z1) == Demeraldcraft.BlockWindmill){
+			y1++;
+		}
+		int direction = 7-tileentity.getWorldObj().getBlockMetadata(x1, y1, z1);
 		
 		GL11.glPushMatrix();
 			GL11.glTranslatef((float)x, (float)y, (float)z);
@@ -53,9 +59,44 @@ public class TileEntityRenderWindmill extends TileEntitySpecialRenderer {
 					tessellator.addVertexWithUV(1-(16-8)/2*pixel, 1, 1-(16-8)/2*pixel, 0, 0);
 					tessellator.addVertexWithUV(1-(16-8)/2*pixel, -0.6, 1-(16-8)/2*pixel, 0, 1);
 				}
+				if(metadata > 7){
+					
+				}
 			}
 			tessellator.draw(); // Ends
+			if(metadata > 7){
+				drawRotor();
+			}
 		GL11.glPopMatrix();
 	}
 
+	
+	private void drawRotor(){
+		Tessellator tessellator = Tessellator.instance;
+		this.bindTexture(textureWindmillBlade);
+		tessellator.startDrawingQuads();
+		{
+			tessellator.addVertexWithUV(-2*pixel, 0.5+1*pixel, 1*pixel+0.5F, 1, 1);
+			tessellator.addVertexWithUV(-2*pixel, 2.5, 1*pixel+0.5F, 1, 1);
+			tessellator.addVertexWithUV(-2*pixel, 2.5, -1*pixel+0.5F, 1, 1);
+			tessellator.addVertexWithUV(-2*pixel, 0.5+1*pixel, -1*pixel+0.5F, 1, 1);
+	
+			tessellator.addVertexWithUV(-2*pixel, -1.5, 1*pixel+0.5F, 1, 1);
+			tessellator.addVertexWithUV(-2*pixel, 0.5-1*pixel, 1*pixel+0.5F, 1, 1);
+			tessellator.addVertexWithUV(-2*pixel, 0.5-1*pixel, -1*pixel+0.5F, 1, 1);
+			tessellator.addVertexWithUV(-2*pixel, -1.5, -1*pixel+0.5F, 1, 1);
+	
+			tessellator.addVertexWithUV(-2*pixel, 0.5-1*pixel, 2.5F, 1, 1);
+			tessellator.addVertexWithUV(-2*pixel, 0.5+1*pixel, 2.5F, 1, 1);
+			tessellator.addVertexWithUV(-2*pixel, 0.5+1*pixel, 0.5F+1*pixel, 1, 1);
+			tessellator.addVertexWithUV(-2*pixel, 0.5-1*pixel, 0.5F+1*pixel, 1, 1);
+	
+			tessellator.addVertexWithUV(-2*pixel, 0.5-1*pixel, 0.5F-1*pixel, 1, 1);
+			tessellator.addVertexWithUV(-2*pixel, 0.5+1*pixel, 0.5F-1*pixel, 1, 1);
+			tessellator.addVertexWithUV(-2*pixel, 0.5+1*pixel, -1.5F, 1, 1);
+			tessellator.addVertexWithUV(-2*pixel, 0.5-1*pixel, -1.5F, 1, 1);
+		}
+		tessellator.draw();
+		
+	}
 }
