@@ -1,13 +1,13 @@
 [
 {
-  "modid": "demeraldcraft",
+  "modid": "DemeraldCraft",
   "name": "Demerald Craft",
-  "description": "Demerald Craft mod.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "description": "With added Demeralds",
+  "version": "1.0",
+  "mcversion": "1.7.10",
   "url": "",
   "updateUrl": "",
-  "authorList": ["thezak48"], ["stobbsie"],
+  "authorList": ["thezak48"],
   "credits": "",
   "logoFile": "",
   "screenshots": [],

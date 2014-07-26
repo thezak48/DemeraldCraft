@@ -1,15 +1,12 @@
-item.Demerald.name=Demerald
-item.Windmill.name=Windmill
+//Items
+item.demeraldcraft:demerald.name=Demerald
 
+//Blocks
+tile.demeraldcraft:demeraldore.name=Demerald Ore
+tile.demeraldcraft:demeraldblock.name=Demerald Block
+tile.demeraldcraft:demeraldfurnace.name=Demerald Furnace
 
+//GUI
 
-tile.DemeraldBlock.name=Demerald Block
-tile.DemeraldOre.name=Demerald Ore
-tile.DemeraldFurnace.name=Demerald Furnace
-tile.WindmillBlock.name=Windmill
-tile.WindmillBase.anme=Windmill Base
-
-
-
-
+//Creative Tab
 itemGroup.DemeraldCraft=Demerald Craft
