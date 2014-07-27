@@ -4,7 +4,6 @@ import java.util.Random;
 
 import com.saundersmayhem.demeraldcraft.creativetab.CreativeTab;
 import com.saundersmayhem.demeraldcraft.reference.Textures;
-import com.saundersmayhem.demeraldcraft.tileentity.TileEntityDC;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
